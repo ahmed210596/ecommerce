@@ -1,0 +1,35 @@
+﻿@model E_commerce.ProductViewModel.ViewModel
+
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-header">
+            <strong>Create Product</strong>
+        </div>
+        <form asp-action="CreateProduct" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="card-body card-block">
+                <div class="form-group">
+                    <label for="name" class="form-control-label">Product Name</label>
+                    <input type="text" asp-for="ProdutName" id="name" placeholder="Enter your product name" class="form-control">
+                    <span asp-validation-for="ProdutName"></span>
+                </div>
+                <div class="form-group">
+                    <label for="desc" class="form-control-label">Product Description</label>
+                    <input type="text" asp-for="ProductDescription" id="desc" placeholder="Enter your product description" class="form-control">
+                    <span asp-validation-for="ProductDescription"></span>
+                </div>
+                <div class="form-group">
+                    <label for="img" class="form-control-label">Product Image</label>
+                    <input type="file" name="file" asp-for="ProductImage" id="img" class="form-control">
+                    <span asp-validation-for="ProductImage"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Category" class="form-control-label">Company</label>
+                    <select asp-for="CategoryId" id="Category" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                    <span asp-validation-for="CategoryId"></span>
+                </div>
+                <button type="submit" class="btn btn-outline-success">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

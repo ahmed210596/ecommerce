@@ -1,0 +1,23 @@
+﻿@model Category
+
+<div class="col-lg-6">
+    
+    <div class="card">
+        <div class="card-header">
+            <strong>Create Catagory</strong>
+            
+        </div>
+        <form asp-action="CreateCategory" method="post">
+             <div asp-validation-summary="ModelOnly"></div>
+        <div class="card-body card-block">
+            <div class="form-group">
+                <label for="Category" class=" form-control-label">Company</label>
+                    <input type="text" asp-for="CategoryName" id="Category" placeholder="Enter your category name" class="form-control">
+                    <span asp-validation-for="CategoryName"></span>
+            </div>
+          <button type="submit" class="btn-outline-success">Save</button>
+        </div>
+        </form>
+    </div>
+</div>
+

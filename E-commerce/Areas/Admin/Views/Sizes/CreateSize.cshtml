@@ -1,0 +1,22 @@
+﻿@model Size
+
+<div class="col-lg-6">
+
+    <div class="card">
+        <div class="card-header">
+            <strong>Create size</strong>
+
+        </div>
+        <form asp-action="CreateSize" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="card-body card-block">
+                <div class="form-group">
+                    <label for="Category" class=" form-control-label">Size Name</label>
+                    <input type="text" asp-for="SizeName" id="Category" placeholder="Enter your size name" class="form-control">
+                    <span asp-validation-for="SizeName"></span>
+                </div>
+                <button type="submit" class="btn-outline-success">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
